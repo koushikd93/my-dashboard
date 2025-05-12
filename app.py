@@ -24,8 +24,9 @@ def load_all_excels(folder_path):
     return pd.concat(df_list, ignore_index=True)
 
 # === Constants ===
-folder_path = "D:/excel_data"
+folder_path = "data"
 df_raw = load_all_excels(folder_path)
+
 
 # === Rename column ===
 df_raw.rename(columns={'LPG . No.': 'Chainage'}, inplace=True)
